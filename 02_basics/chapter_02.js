@@ -78,5 +78,6 @@ const course = {
   instructor: "Toufique Al Ajay",
 };
 
-const { instructor } = course;
-console.log(instructor);
+// rename the properties
+const { instructor: insta } = course;
+console.log(insta);
