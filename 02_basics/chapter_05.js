@@ -50,10 +50,13 @@ const result = (num1, num2) => {
 // console.log(result(30, 40));
 
 // implicit return in arrow function
-
 const fullname = (firstname, lastname) => firstname + lastname;
 // if we user curly braces then must write down return keyword..else if use parenthisis then not required
-const anotherFullName = (firstname, lastname) => firstname + lastname;
+const anotherFullName = (firstname, lastname) => (firstname + lastname);
 
-console.log(fullname("alu", " kabli"));
-console.log(anotherFullName("chat", " papri"));
+// implicitly return object
+const realName = () => ({username: "Toufique Al Ajay"});
+
+// console.log(fullname("alu", " kabli"));
+// console.log(anotherFullName("chat", " papri"));
+console.log(realName().username);
