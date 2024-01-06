@@ -37,6 +37,7 @@ const item = {
 };
 
 function showItems(obj) {
+  console.log("ITEM: ");
   console.log(`The item you carted is ${obj.name}`);
   console.log(`Price is ${obj.price}`);
   console.log(`Manufacturer ${obj.mft}`);
@@ -47,4 +48,20 @@ function showItems(obj) {
   }
 }
 
-showItems(item);
+// showItems(item);
+// showItems({
+//   name: "samsung s21 ultra",
+//   price: 40000,
+//   mft: "samsung PVT. LTD",
+//   inStock: false,
+// });
+
+/* function with array */
+
+const arr = [10, 30, 50, 60, 40];
+
+function handleArray(anyArr) {
+  console.log(anyArr[1]);
+}
+
+handleArray(arr);
