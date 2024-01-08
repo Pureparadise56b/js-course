@@ -77,3 +77,10 @@ let score2 = 200;
 let score3 = 300;
 
 // console.log(Array.of(score1, score2, score3));
+
+/* This two method is used to convert node list and html collection into array */
+
+// Array.from(Node_list);
+// Array.from(HTML_collection);
+
+// Node list and HTML collection are not purely array..They don't have most of the array methods.
