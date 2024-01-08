@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+    <style>
+      body {
+        background-color: #212121;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="courses">
+      <li>Javascript</li>
+    </ul>
+  </body>
+  <script>
+    // Add Element
+    function addCouser(cName) {
+      const li = document.createElement("li");
+      li.innerHTML = cName;
+      document.querySelector(".courses").appendChild(li);
+    }
+    addCouser("python");
+    addCouser("cpp");
+
+    //optimized method
+    function addOptiCourse(cName) {
+      const li = document.createElement("li");
+      li.appendChild(document.createTextNode(cName));
+      document.querySelector(".courses").appendChild(li);
+    }
+    addOptiCourse("golang");
+
+    // Edit
+    function editCourse(cName) {
+      const secondLan = document.querySelector("li:nth-child(2)");
+      // secondLan.innerHTML = "mojo";
+
+      const newLi = document.createElement("li");
+      newLi.appendChild(document.createTextNode(cName));
+      secondLan.replaceWith(newLi);
+    }
+    editCourse("Mojo");
+
+    // Remove
+    const lastLang = document.querySelector("li:nth-last-child(1)");
+    lastLang.remove();
+  </script>
+</html>

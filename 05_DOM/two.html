@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+    <style>
+      body {
+        background-color: #212121;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="day">Monday</div>
+      <div class="day">Tuesday</div>
+      <div class="day">Wednesday</div>
+      <div class="day">Thursday</div>
+    </div>
+  </body>
+  <script>
+    let parent = document.querySelector(".parent");
+
+    // console.log(parent.children[1].innerText);
+
+    for (let i = 0; i < parent.children.length; i++) {
+      parent.children[i].style.color = "orange";
+    }
+
+    // console.log(parent.lastElementChild.innerText);
+
+    let day = document.querySelector(".day");
+
+    // console.log(day.parentElement);
+    // console.log(day.nextElementSibling);
+
+    // console.log(parent.childNodes);
+
+    // creating DOM elements using js
+    const div = document.createElement("div");
+    div.setAttribute("class", "partyday");
+    div.style.color = "lightseagreen";
+
+    // const text = document.createTextNode("Friday");
+    // div.appendChild(text);
+
+    div.innerText = "hello ji";
+    document.body.appendChild(div);
+  </script>
+</html>
