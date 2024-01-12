@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events</title>
+    <style>
+      body {
+        background-color: #414141;
+        color: #fff;
+      }
+      a {
+        font-size: 1.5vw;
+        color: #fff;
+      }
+      .image {
+        cursor: pointer;
+        width: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <ul id="images">
+      <li>
+        <img
+          class="image"
+          id="owl"
+          src="https://images.pexels.com/photos/1376986/pexels-photo-1376986.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          alt="owl"
+        />
+      </li>
+      <li>
+        <img
+          class="image"
+          id="rabbit"
+          src="https://images.pexels.com/photos/104373/pexels-photo-104373.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          alt=""
+        />
+      </li>
+      <li>
+        <img
+          class="image"
+          id="dog"
+          src="https://images.pexels.com/photos/58997/pexels-photo-58997.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          alt=""
+        />
+      </li>
+      <li>
+        <img
+          class="image"
+          id="cat"
+          src="https://images.pexels.com/photos/104827/cat-pet-animal-domestic-104827.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          alt=""
+        />
+      </li>
+      <li>
+        <a id="google" target="_blank" href="https://www.google.com/">google</a>
+      </li>
+    </ul>
+  </body>
+  <script>
+    /* What I should learn about events*/
+    // type
+    // timestamp
+    //defaultPrevented
+    //target
+    //srcElemet
+    //toElement
+    //currentTarget
+    //clientX, clientY, screenX, screenY
+    //altKey, ctrlKey, shiftKey, keyCode
+
+    /*
+      document.getElementById("images").addEventListener(
+        "click",
+        function (e) {
+          console.log("click inside the ul");
+        },
+        false
+      );
+
+      document.getElementById("cat").addEventListener("click", function (e) {
+        console.log("cat clicked");
+        e.stopPropagation(); // stop the event bubbling
+      });
+
+      // false -> event bubbling
+      // true -> event capturing
+
+      document.getElementById("google").addEventListener("click", function (e) {
+        console.log("google clicked");
+        e.stopPropagation();
+        e.preventDefault();
+      });
+    */
+
+    document.querySelector("#images").addEventListener("click", function (e) {
+      console.log(e.target.tagName);
+
+      if (e.target.tagName === "IMG") {
+        let removeIt = e.target.parentNode;
+        removeIt.remove();
+      }
+
+      // removeIt.parentNode.removeChild(removeIt);
+    });
+  </script>
+</html>
