@@ -1,0 +1,8 @@
+Javascript (default) => Synchronous & Single Threaded
+
+# Core Javascript is a Synchronous code language. But the runtime environment of Javascript like Browser or Node provides Asynchronous functionalities
+
+# There are two types of JS code -> 1. Blocking Code, 2. Non Blocking Code
+
+> Blocking Code = block the execution flow of the code e.g. READ FILE SYNC
+> Non Blocking Code = doesn't block execution e.g. READ FILE ASYNC
