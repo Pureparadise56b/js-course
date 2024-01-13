@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random BG</title>
+    <style>
+      @font-face {
+        font-family: gilroy;
+        src: url(Gilroy-Regular.ttf);
+      }
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: gilroy;
+        letter-spacing: 1px;
+      }
+
+      html,
+      body {
+        color: #fff;
+        height: 100%;
+        width: 100%;
+        text-align: center;
+        background-color: #212121;
+      }
+      main {
+        padding-top: 20px;
+      }
+      button {
+        font-size: 1.5vw;
+        color: #fff;
+        margin: 20vw 3vw;
+        background: none;
+        border: none;
+        border-radius: 5px;
+        padding: 10px;
+        background-color: #515151;
+        mix-blend-mode: screen;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Random Color Background</h1>
+      <h3>
+        start button starts the random colour generator and stop button stops it
+      </h3>
+      <button id="start">start</button>
+      <button id="stop">stop</button>
+    </main>
+  </body>
+  <script src="script.js"></script>
+</html>
