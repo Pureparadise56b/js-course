@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API</title>
+  </head>
+  <body>
+    <h1>API Calling</h1>
+  </body>
+  <script>
+    const requestURL = [
+      "https://api.github.com/users/PureParadise56b",
+      "https://randomuser.me/api/",
+    ];
+
+    //APIrequest using XMLHttpRequest
+
+    const xhr = new XMLHttpRequest();
+
+    xhr.onreadystatechange = function () {
+      console.log("STATE: ", xhr.readyState);
+      if (xhr.readyState === 4) {
+        // console.log(typeof this.responseText);
+        const data = JSON.parse(this.responseText); // converting string response into object
+        console.log(data.results[0]);
+      }
+    };
+
+    xhr.open("GET", requestURL[1]);
+
+    xhr.send();
+
+    // advance API request
+
+    // const response = fetch(requestURL[0]);
+    // const data = response.then((res) => res.json());
+    // data.then((d) => {
+    //   console.log(d);
+    // });
+  </script>
+</html>
