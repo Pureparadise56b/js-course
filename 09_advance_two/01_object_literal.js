@@ -2,45 +2,45 @@
 
 // Usage of this keyword
 
-// function greet() {
-//   console.log(`Good Morning ${this.username}`);
-// }
+function greet() {
+  console.log(`Good Morning ${this.username}`);
+}
 
-// const user = {
-//   username: "Ajay",
-//   age: 19,
-//   loginCount: 6,
-//   signedIn: true,
-//   greet,
-// };
+const user = {
+  username: "Ajay",
+  age: 19,
+  loginCount: 6,
+  signedIn: true,
+  greet,
+};
 
-// user.greet();
+user.greet();
 
 /* Problem while not using this keyword to refer the corrent context */
 
-// function printUsername() {
-//   console.log(`Username is: ${user.username}`);
-// }
+function printUsername() {
+  console.log(`Username is: ${user.username}`);
+}
 
-// const user = {
-//   username: "Ajay",
-//   age: 19,
-//   loginCount: 6,
-//   signedIn: true,
-//   showName: printUsername,
-// };
+const user = {
+  username: "Ajay",
+  age: 19,
+  loginCount: 6,
+  signedIn: true,
+  showName: printUsername,
+};
 
-// user.showName(); // Output: Username is: Ajay
+user.showName(); // Output: Username is: Ajay
 
-// const anotherUser = {
-//   username: "taniya",
-//   age: 22,
-//   loginCount: 10,
-//   signedIn: false,
-//   showName: printUsername,
-// };
+const anotherUser = {
+  username: "taniya",
+  age: 22,
+  loginCount: 10,
+  signedIn: false,
+  showName: printUsername,
+};
 
-// anotherUser.showName(); // Output: Username is: Ajay
+anotherUser.showName(); // Output: Username is: Ajay
 
 /* Constructor Function */
 
