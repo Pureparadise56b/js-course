@@ -1,44 +1,44 @@
-// /* Creating Promises */
+/* Creating Promises */
 
-// // first Promise
-// const promiseOne = new Promise(function (resolve, reject) {
-//   // Do any asyn task e.g. DB calls, file Read/Write, cryptography, network calls
-//   setTimeout(() => {
-//     console.log("Async Task Completed..");
-//     resolve();
-//   }, 1000);
-// });
+// first Promise
+const promiseOne = new Promise(function (resolve, reject) {
+  // Do any asyn task e.g. DB calls, file Read/Write, cryptography, network calls
+  setTimeout(() => {
+    console.log("Async Task Completed..");
+    resolve();
+  }, 1000);
+});
 
-// // second Promise
-// promiseOne.then(function () {
-//   console.log("promise consumed..");
-// });
+promiseOne.then(function () {
+  console.log("promise consumed..");
+});
 
-// new Promise(function (resolve, reject) {
-//   setTimeout(() => {
-//     console.log("Async Task Two");
-//     resolve();
-//   }, 1000);
-// }).then(function () {
-//   console.log("Async two resolved");
-// });
+// second Promise
+new Promise(function (resolve, reject) {
+  setTimeout(() => {
+    console.log("Async Task Two");
+    resolve();
+  }, 1000);
+}).then(function () {
+  console.log("Async two resolved");
+});
 
-// // third Promise
-// const promiseThree = new Promise(function (resolve, reject) {
-//   const data = {
-//     name: "Toufique Al Ajay",
-//     age: 19,
-//     email: "toufique26ajay@gmail.com",
-//     password: "ajay@9339",
-//   };
-//   setTimeout(() => {
-//     resolve(data);
-//   }, 1000);
-// });
+// third Promise
+const promiseThree = new Promise(function (resolve, reject) {
+  const data = {
+    name: "Toufique Al Ajay",
+    age: 19,
+    email: "toufique26ajay@gmail.com",
+    password: "ajay@9339",
+  };
+  setTimeout(() => {
+    resolve(data);
+  }, 1000);
+});
 
-// promiseThree.then(function (user) {
-//   console.log("ASYNC 3 USER: ", user);
-// });
+promiseThree.then(function (user) {
+  console.log("ASYNC 3 USER: ", user);
+});
 
 // fourth Promise
 const promiseFour = new Promise(function (resolve, reject) {
@@ -56,6 +56,7 @@ const promiseFour = new Promise(function (resolve, reject) {
   }, 1000);
 });
 
+// thenable chaining with Promise
 const username = promiseFour
   .then(function (user) {
     return user.name;
@@ -71,7 +72,6 @@ const username = promiseFour
   });
 
 //fifth Promise
-
 const promiseFive = new Promise(function (resolve, reject) {
   const data = {
     name: "Taniya",
