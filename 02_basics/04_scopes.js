@@ -25,7 +25,7 @@ if (1) {
 function senior() {
   const iceCream = "butter scotch";
 
-  //closer
+  //closure
   function junior() {
     const cake = "black forest";
     // console.log("icecream: ", iceCream);

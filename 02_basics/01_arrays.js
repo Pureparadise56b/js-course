@@ -64,13 +64,15 @@ const numbers = [
 
 // console.log(Array.from("Toufique Al Ajay"));
 
-// console.log(
-//   Array.from({
-//     name: "ajay",
-//     age: 19,
-//     id: 1003,
-//   })
-// );
+// can't create array from an object
+
+// const obj = {
+//   a: 1,
+//   b: 2,
+//   c: 3,
+// };
+// const arr = Array.from(obj);
+// console.log(arr);
 
 let score1 = 100;
 let score2 = 200;
