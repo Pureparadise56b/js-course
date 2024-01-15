@@ -23,7 +23,7 @@ if (points < 1000) {
   console.log(`But you are not a ${gmRank} player.`);
 }
 
-// console.log(rank); // gives error because let has local scope
+// console.log(prRank); // gives error because let has local scope
 // console.log(gmRank);
 
 // one liner conditional
