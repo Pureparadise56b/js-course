@@ -70,39 +70,38 @@
     //clientX, clientY, screenX, screenY
     //altKey, ctrlKey, shiftKey, keyCode
 
-    /*
-      document.getElementById("images").addEventListener(
-        "click",
-        function (e) {
-          console.log("click inside the ul");
-        },
-        false
-      );
+    document.getElementById("images").addEventListener(
+      "click",
+      function (e) {
+        console.log("click inside the ul");
+        // e.stopPropagation(); // stop the event bubbling
+      },
+      true
+    );
 
-      document.getElementById("cat").addEventListener("click", function (e) {
-        console.log("cat clicked");
-        e.stopPropagation(); // stop the event bubbling
-      });
-
-      // false -> event bubbling
-      // true -> event capturing
-
-      document.getElementById("google").addEventListener("click", function (e) {
-        console.log("google clicked");
-        e.stopPropagation();
-        e.preventDefault();
-      });
-    */
-
-    document.querySelector("#images").addEventListener("click", function (e) {
-      console.log(e.target.tagName);
-
-      if (e.target.tagName === "IMG") {
-        let removeIt = e.target.parentNode;
-        removeIt.remove();
-      }
-
-      // removeIt.parentNode.removeChild(removeIt);
+    document.getElementById("cat").addEventListener("click", function (e) {
+      console.log("cat clicked");
+      // e.stopPropagation(); // stop the event bubbling
     });
+
+    // false -> event bubbling
+    // true -> event capturing
+
+    document.getElementById("google").addEventListener("click", function (e) {
+      console.log("google clicked");
+      e.stopPropagation();
+      e.preventDefault();
+    });
+
+    // document.querySelector("#images").addEventListener("click", function (e) {
+    //   console.log(e.target.tagName);
+
+    //   if (e.target.tagName === "IMG") {
+    //     let removeIt = e.target.parentNode;
+    //     removeIt.remove();
+    //   }
+
+    // removeIt.parentNode.removeChild(removeIt);
+    // });
   </script>
 </html>
