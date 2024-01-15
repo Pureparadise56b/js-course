@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Closure</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        height: 100%;
+        width: 100%;
+        background-color: #212121;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      #main {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2.5vw;
+        padding: 5vw 2vw;
+        background-color: #515151a6;
+        border-radius: 10px;
+      }
+      button {
+        font-size: 1vw;
+        background: none;
+        border: none;
+        padding: 10px 20px;
+        background-color: rgb(28, 150, 144);
+        color: #fff;
+        cursor: pointer;
+        border-radius: 20px;
+        transition: all ease 0.3s;
+      }
+      button:hover {
+        background-color: rgb(19, 108, 104);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main">
+      <button id="orange">orange</button>
+      <button id="pink">pink</button>
+      <button id="green">green</button>
+    </div>
+  </body>
+  <script>
+    function changeColor(color) {
+      return function () {
+        document.body.style.backgroundColor = color;
+      };
+    }
+    document
+      .getElementById("orange")
+      .addEventListener("click", changeColor("orange"));
+    document
+      .getElementById("pink")
+      .addEventListener("click", changeColor("pink"));
+    document
+      .getElementById("green")
+      .addEventListener("click", changeColor("green"));
+  </script>
+</html>
