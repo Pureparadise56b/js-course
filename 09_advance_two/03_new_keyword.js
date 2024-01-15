@@ -22,7 +22,7 @@ createProduct.prototype.increamentPrice = function (gst = 0) {
   this.price = this.price + this.price * (gst / 100); // this keyword is essential
 };
 
-const pdtOne = new createProduct("Dove", 27, true); // new keyword is also essential to tell the instance that the constructor has costum prototype.
+const pdtOne = new createProduct("Dove", 27, true); // new keyword is also essential to tell the instance that the constructor has custom prototype.
 
 console.log(pdtOne.productName, pdtOne.price);
 
