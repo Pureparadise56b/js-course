@@ -5,7 +5,7 @@ function setUserName(username) {
 
 function createUser(username, email, password) {
   // explecitly call
-  setUserName.call(this, username); // pass createUser's this to directly set the value on it in seUserName constructor
+  setUserName.call(this, username); // pass createUser's this to directly set the value on it in setUserName constructor
   this.email = email;
   this.password = password;
 }
