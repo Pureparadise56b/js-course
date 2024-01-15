@@ -1,7 +1,8 @@
 // There are two types of memory
-// Stack (Premetive), Heap (Non-Premetive)
+// Stack (Premetive datatype), Heap (Non-Premetive datatype)
 
 //Premetive (Stack)
+// string, number, boolean, bigint, null, undefined
 let myYTName = "PureParadise";
 let myAnotherYTName = myYTName;
 
@@ -11,7 +12,7 @@ console.log(myYTName);
 console.log(myAnotherYTName);
 
 //Non Premetive (Heap)
-
+// Array, Object, Function
 let myDetails = {
   email: "toufique@yahoo.com",
   address: "earth",
