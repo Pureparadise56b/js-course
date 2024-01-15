@@ -57,12 +57,18 @@ const promiseFour = new Promise(function (resolve, reject) {
 });
 
 // thenable chaining with Promise
-const username = promiseFour
+const username = promiseFour.then(function (user) {
+  return user.name;
+});
+
+// console.log("username is: ", username); // then method never return to the variable it only return to the next then method
+
+promiseFour
   .then(function (user) {
     return user.name;
   })
-  .then(function (username) {
-    console.log(username);
+  .then(function (name) {
+    console.log(name);
   })
   .catch(function (error) {
     console.log(error);
