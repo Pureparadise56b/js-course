@@ -25,6 +25,6 @@ let string2 = " ajay";
 
 let counter = 400;
 
-console.log(++counter); //prefix increament then return value
 console.log(counter++); //postfix  return value then increament
+console.log(++counter); //prefix increament then return value
 console.log(counter);

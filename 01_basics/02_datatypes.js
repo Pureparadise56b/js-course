@@ -23,7 +23,7 @@ let isLoggedIn = true;
 // bigint
 // string => ""
 // boolean => true/false
-// null => datndalone value
+// null => standalone value
 // undefined
 // symbol => unique
 

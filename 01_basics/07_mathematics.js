@@ -25,7 +25,7 @@ console.log(balance.toLocaleString("en-IN"));
 // properties on direct Number class
 console.log(Number.MAX_SAFE_INTEGER);
 
-/* Maths */
+/* methods on direct Math object */
 
 console.log(Math);
 console.log(Math.abs(-34));

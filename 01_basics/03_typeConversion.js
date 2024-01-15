@@ -8,7 +8,7 @@ let cvScore = Number(score); // return a number
 let cvAlive = Number(alive); // return 1 or 0
 let cvPassword = Number(password); // return NaN (Not a Number)
 let cvSomething = Number(something); // return 0
-let cvNothing = Number(nothing); // return Nan
+let cvNothing = Number(nothing); // return NaN
 
 console.log(cvScore);
 console.log(cvAlive);
@@ -16,7 +16,7 @@ console.log(cvPassword);
 console.log(cvSomething);
 console.log(cvNothing);
 
-// "45" => 33
+// "45" => 45
 // "45ajay" => NaN
 // true => 1; false => 0
 
