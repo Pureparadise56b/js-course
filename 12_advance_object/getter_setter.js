@@ -63,7 +63,7 @@ console.log(pdtOne.productName);
 const Employe = {
   _email: "emply@emp.com",
   _id: 1001,
-  _password: "ajay9339",
+  _password: "********",
   // comma is must after every setter or getter method end
   get id() {
     return this._id + "D";
